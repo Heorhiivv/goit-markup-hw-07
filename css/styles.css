@@ -1,11 +1,3 @@
-html {
-  box-sizing: border-box;
-}
-*,
-*::before,
-*::after {
-  box-sizing: inherit;
-}
 :root {
   --primary-text-color: #212121;
   --secondary-text-color: #757575;
@@ -14,6 +6,14 @@ html {
   --secondary-bg-color: #F5F4FA;
   --third-bg-color: #2F303A;
   --media-color: #AFB1B8;
+}
+html {
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
 }
 body {
   margin: 0 auto;
@@ -29,16 +29,11 @@ body {
   margin: 0px;
   list-style: none;
 }
-.title {
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.167;
-  letter-spacing: 0.03em;
-
-  text-align: center;
-
-  margin-top: 0px;
-  margin-bottom: 50px;
+img {
+  display: block;
+}
+address {
+  font-style: normal;
 }
 .visually-hidden {
   position: absolute !important;
@@ -50,9 +45,6 @@ body {
   width: 1px !important;
   overflow: hidden;
 }
-img {
-  display: block;
-}
 .container {
   width: 1200px;
   padding-left: 15px;
@@ -63,17 +55,16 @@ img {
   padding-top: 94px;
   padding-bottom: 94px;
 }
-address {
-  font-style: normal;
-}
-/********** HEADER ***********/
-.page-header {
-  border-bottom: 1px solid #ECECEC;
-}
-.header-parts,
-.page-header-nav {
-  display: flex;
-  align-items: center;
+.title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.167;
+  letter-spacing: 0.03em;
+
+  text-align: center;
+
+  margin-top: 0px;
+  margin-bottom: 50px;
 }
 .logo {
   display: flex;
@@ -85,6 +76,15 @@ address {
   letter-spacing: 0.03em;
 
   color: var(--accent-color);
+}
+/********** HEADER ***********/
+.page-header {
+  border-bottom: 1px solid #ECECEC;
+}
+.header-parts,
+.page-header-nav {
+  display: flex;
+  align-items: center;
 }
 .logo-header {
   color: var(--primary-text-color);
@@ -164,6 +164,7 @@ address {
 .header-address .contacts:focus {
   color: var(--accent-color);
 }
+
 .contacts {
   align-items: center;
   display: flex;
