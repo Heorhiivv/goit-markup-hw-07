@@ -115,7 +115,6 @@
     outline: none;
   }
 }
-
 .modal-form-field {
   position: relative;
   margin-bottom: 10px;
@@ -131,6 +130,9 @@
   left: 0;
   
   margin: 11px 12px;
+}
+.modal-form-input:focus ~ .modal-form-pick {
+  fill: var(--accent-color);
 }
 .modal-form-items-title {
   margin-bottom: 4px;
@@ -164,9 +166,6 @@
   background-image: url(../images/svg/icon-check.svg);
   background-size: contain;
   background-origin: border-box;
-}
-.modal-form-check:checked ~ .modal-form-label-check {
-  transform: translateX(15px);
 }
 .confirmation {
   font-size: 14px;
