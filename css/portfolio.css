@@ -105,20 +105,18 @@ address {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.social-link:focus, .social-link:hover {
+  background-color: var(--accent-color);
+}
+
+.social-link:focus .network-icon, .social-link:hover .network-icon {
+  fill: var(--white-text-color);
+}
+
 .network-icon {
   width: 20px;
   height: 20px;
   fill: var(--media-color);
-}
-
-.social-link:hover .network-icon,
-.social-link:focus .network-icon {
-  fill: var(--white-text-color);
-}
-
-.social-link:hover,
-.social-link:focus {
-  background-color: var(--accent-color);
 }
 
 /* *****SOCIAL -NETWORK - LIST - END**** */
@@ -158,8 +156,14 @@ address {
   color: var(--primary-text-color);
 }
 
-.site-nav-item:not(:last-child) {
-  margin-right: 50px;
+.site-nav .link:hover, .site-nav .link:focus, .site-nav .link.current {
+  color: var(--accent-color);
+}
+
+.site-nav .link:hover::after,
+.site-nav .link:focus::after,
+.site-nav .link.current::after {
+  opacity: 1;
 }
 
 .site-nav-item .link::after {
@@ -176,16 +180,8 @@ address {
   border-radius: 2px;
 }
 
-.site-nav .link:hover::after,
-.site-nav .link:focus::after,
-.site-nav .link.current::after {
-  opacity: 1;
-}
-
-.site-nav .link:hover,
-.site-nav .link:focus,
-.site-nav .link.current {
-  color: var(--accent-color);
+.site-nav-item:not(:last-child) {
+  margin-right: 50px;
 }
 
 /********** SITE-NAV END *********/
@@ -211,18 +207,18 @@ address {
   color: var(--secondary-text-color);
 }
 
-.header-address .contacts:hover,
-.header-address .contacts:focus {
+.header-address .contacts:hover, .header-address .contacts:focus {
   color: var(--accent-color);
 }
 
 .contact-pick {
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   margin-right: 10px;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   fill: var(--secondary-text-color);
 }
 
-.contacts:hover .contact-pick {
+.contacts:hover .contact-pick,
+.contacts:focus .contact-pick {
   fill: var(--accent-color);
 }
 
@@ -238,7 +234,7 @@ address {
   text-align: center;
 }
 
-.radio-btn .a {
+.radio-btn a {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.625;
@@ -260,8 +256,7 @@ address {
   transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.filter-btn:hover,
-.filter-btn:focus {
+.filter-btn:hover, .filter-btn:focus {
   color: var(--white-text-color);
   background-color: var(--accent-color);
 }
@@ -300,9 +295,13 @@ address {
   margin-right: 30px;
 }
 
-.projects-item:hover,
-.projects-item:focus {
+.projects-item:hover, .projects-item:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+.projects-item:hover .projects-overlay-text, .projects-item:focus .projects-overlay-text {
+  transform: translateY(0);
+  opacity: 1;
 }
 
 .projects-link {
@@ -347,12 +346,6 @@ address {
   overflow: hidden;
 }
 
-.projects-item:hover .projects-overlay-text,
-.projects-item:focus .projects-overlay-text {
-  transform: translateY(0);
-  opacity: 1;
-}
-
 /* ********FOOTER ***********/
 .footer {
   margin: 0 auto;
@@ -387,13 +380,12 @@ address {
   color: var(--white-text-color);
 }
 
-.footer-address .contacts:hover,
-.footer-address .contacts:focus {
-  color: var(--accent-color);
-}
-
 .footer-address .contacts {
   color: rgba(255, 255, 255, 0.6);
+}
+
+.footer-address .contacts:hover, .footer-address .contacts:focus {
+  color: var(--accent-color);
 }
 
 .footer-address-item:not(:last-child) {
@@ -420,7 +412,8 @@ address {
   fill: var(--white-text-color);
 }
 
-.footer-media .social-link:hover {
+.footer-media .social-link:hover,
+.footer-media .social-link:focus {
   background-color: var(--accent-color);
 }
 
@@ -483,24 +476,18 @@ address {
   border-radius: 4px;
 }
 
-.subscription-button:hover,
-.subscription-button:focus {
+.subscription-button:hover, .subscription-button:focus {
   color: var(--primary-text-color);
   background-color: var(--secondary-bg-color);
+  fill: var(--accent-color);
+}
+
+.subscription-button:hover .form-subscription-icon, .subscription-button:focus .form-subscription-icon {
+  fill: var(--accent-color);
 }
 
 .form-subscription-icon {
   margin-left: 10px;
   fill: var(--white-text-color);
-}
-
-.subscription-button:hover
-.form-subscription-icon {
-  fill: var(--accent-color);
-}
-
-.subscription-button:focus
-.form-subscription-icon {
-  fill: var(--accent-color);
 }
 /*# sourceMappingURL=portfolio.css.map */

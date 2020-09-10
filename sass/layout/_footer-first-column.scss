@@ -11,13 +11,13 @@
 
   color: var(--white-text-color);
 }
-.footer-address .contacts:hover,
-.footer-address .contacts:focus {
-  color: var(--accent-color);
-}
+
 .footer-address .contacts {
   color: rgba(255, 255, 255, 0.6);
-}
+    &:hover,
+    &:focus {color: var(--accent-color);
+    }
+  }
 .footer-address-item:not(:last-child) {
   margin-bottom: 9px;
 }

@@ -5,11 +5,11 @@
 .features-list {
   display: flex;
 }
-.features-item:not(:last-child) {
-  margin-right: 30px;
-}
 .features-item {
   position: relative;
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
 }
 .features-item-title {
   margin: 0 auto;

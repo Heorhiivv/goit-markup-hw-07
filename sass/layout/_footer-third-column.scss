@@ -1,8 +1,7 @@
 /* 3rd column */
 .third-footer-column {
   margin-left: 93px;
-}
-.third-footer-column p {
+    & p {
   font-weight: 700;
   font-size: 14px;
   line-height: 1.143;
@@ -13,6 +12,7 @@
   margin-bottom: 20px;
   
   color: var(--white-text-color);
+}
 }
 .footer-form-subscription {
   display: flex;
@@ -56,21 +56,19 @@
   line-height: 1.87;
   letter-spacing: 0.06em;
   border-radius: 4px;
-}
-.subscription-button:hover,
-.subscription-button:focus {
-  color: var(--primary-text-color);
-  background-color: var(--secondary-bg-color);
-}
+
+    &:hover,
+    &:focus {
+      color: var(--primary-text-color);
+      background-color: var(--secondary-bg-color);
+      fill: var(--accent-color);
+
+        & .form-subscription-icon {
+            fill: var(--accent-color);
+      }
+    }
+  }
 .form-subscription-icon {
   margin-left: 10px;
   fill: var(--white-text-color);
-}
-.subscription-button:hover
-.form-subscription-icon {
-  fill: var(--accent-color);
-}
-.subscription-button:focus
-.form-subscription-icon {
-  fill: var(--accent-color);
 }

@@ -17,7 +17,8 @@
 .second-footer-column .network-icon {
   fill: var(--white-text-color);
 }
-.footer-media .social-link:hover {
+.footer-media .social-link:hover,
+.footer-media .social-link:focus {
   background-color: var(--accent-color);
 }
 .second-footer-column .social-network-item {
