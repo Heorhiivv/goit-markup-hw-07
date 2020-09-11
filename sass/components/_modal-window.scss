@@ -124,15 +124,15 @@
     fill: var(--accent-color);
   }
 }
+.modal-form-input:focus ~ .modal-form-pick {
+  fill: var(--accent-color);
+}
 .modal-form-pick {
   position: absolute;
   top: 0;
   left: 0;
   
   margin: 11px 12px;
-}
-.modal-form-input:focus ~ .modal-form-pick {
-  fill: var(--accent-color);
 }
 .modal-form-items-title {
   margin-bottom: 4px;
